@@ -13,7 +13,12 @@ public class PlayerPaddle : Paddle
         {
             _direction = Vector2.down;
         }
+        else
+        {
+            _direction = Vector2.zero;
+        }
     }
+
     private void FixedUpdate()
     {
         if (_direction.sqrMagnitude != 0)
