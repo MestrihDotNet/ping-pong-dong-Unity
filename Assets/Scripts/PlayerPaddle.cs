@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerPaddle : Paddle
@@ -24,6 +25,13 @@ public class PlayerPaddle : Paddle
         if (_direction.sqrMagnitude != 0)
         {
             _rigidbody.AddForce(_direction * this.speed);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ball"))
+        {
+
         }
     }
 }
