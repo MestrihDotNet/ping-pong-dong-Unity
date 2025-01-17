@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        AddStartingForce();
+        ResetPosition();
     }
 
     // Add the initial random force when the game starts
@@ -80,5 +80,10 @@ public class Ball : MonoBehaviour
             }
         }
     }
-
+    public void ResetPosition()
+    {
+        _rigidbody.linearVelocity = Vector3.zero;
+        _rigidbody.position = Vector3.zero;
+        AddStartingForce();
+    }
 }
