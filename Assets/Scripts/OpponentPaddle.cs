@@ -1,16 +1,15 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerPaddle : Paddle
+public class OpponentPaddle : Paddle
 {
     private Vector2 _direction;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             _direction = Vector2.up;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             _direction = Vector2.down;
         }
