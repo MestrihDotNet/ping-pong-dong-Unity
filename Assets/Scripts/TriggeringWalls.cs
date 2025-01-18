@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class TriggeringWall : MonoBehaviour
 {
@@ -16,12 +16,14 @@ public class TriggeringWall : MonoBehaviour
         {
             if (gameObject.CompareTag("PlayerWall"))
             {
-                gameManager.PlayerScore();
+                gameManager.OpponentScore();
+
             }
             else if (gameObject.CompareTag("OpponentWall"))
             {
-                gameManager.OpponentScore();
+                gameManager.PlayerScore();
             }
         }
     }
 }
+*/

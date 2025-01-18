@@ -39,4 +39,9 @@ public class Paddle : MonoBehaviour
         // Change the color back to the original
         _spriteRenderer.color = _originalColor;
     }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = new Vector3(_rigidbody.position.x, 0.0f);
+    }
 }

@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     protected Rigidbody2D _rigidbody;
     private Vector2 normalizedDirection; // Class-level variable for normalized direction
     private Vector2 currentVelocity; // Class-level variable for current velocity
-
+    public TrailRenderer trail;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -15,11 +15,11 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        ResetPosition();
+        AddStartingForce();
     }
 
     // Add the initial random force when the game starts
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         // Randomize the X direction, left or right using UnityEngine.Random
         float x = UnityEngine.Random.value < 0.5f ? -1.0f : 1.0f;
@@ -80,10 +80,5 @@ public class Ball : MonoBehaviour
             }
         }
     }
-    public void ResetPosition()
-    {
-        _rigidbody.linearVelocity = Vector3.zero;
-        _rigidbody.position = Vector3.zero;
-        AddStartingForce();
-    }
+
 }
